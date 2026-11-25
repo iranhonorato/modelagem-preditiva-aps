@@ -86,3 +86,14 @@ No VS Code, selecione o interpretador `.venv/bin/python` (ou o kernel `.venv` no
 - Código da APS em **R**.
 - Envio de um `.zip` (relatório + código) via Blackboard até **24/11/2026, 23h59**.
 - Prova Final em **25/11/2026**, com questões sobre o conteúdo da APS.
+
+## Reprodução do relatório em R
+
+Execute na raiz do projeto com R instalado:
+
+```sh
+Rscript -e 'install.packages(c("tree", "rpart", "class", "ranger", "gbm"), repos = "https://cloud.r-project.org")'
+Rscript src/aps.R
+```
+
+O script lê os CSVs em `data/` e gera as métricas e figuras dos modelos em `docs/resultados_aps/`. Os notebooks em Python registram os estudos exploratórios anteriores.
